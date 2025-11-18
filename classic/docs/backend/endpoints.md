@@ -73,7 +73,7 @@ Login con Google OAuth2.
 Obtiene información del usuario autenticado.
 
 **Headers:**
-Authorization: Bearer {token}
+Authorization: Bearer \{token\}
 
 **Response:**
 ```json
@@ -89,7 +89,7 @@ Authorization: Bearer {token}
 Obtiene información de un usuario por ID.
 
 **Headers:**
-Authorization: Bearer {token}
+Authorization: Bearer \{token\}
 
 **Response:**
 ```json
@@ -162,7 +162,7 @@ Obtiene detalle de un plan específico.
 Lista todas las instancias del usuario autenticado.
 
 **Headers:**
-Authorization: Bearer {token}
+Authorization: Bearer \{token\}
 
 **Query Params (opcional):**
 - status: running, stopped, terminated
@@ -257,7 +257,7 @@ Elimina una instancia.
 Crea una preferencia de pago en MercadoPago.
 
 **Headers:**
-Authorization: Bearer {token}
+Authorization: Bearer \{token\}
 
 **Request Body:**
 ```json
@@ -291,7 +291,7 @@ Webhook para notificaciones de MercadoPago.
 Obtiene historial de pagos del usuario.
 
 **Headers:**
-Authorization: Bearer {token}
+Authorization: Bearer \{token\}
 
 **Response:**
 ```json
@@ -316,7 +316,7 @@ Authorization: Bearer {token}
 Obtiene el plan actual del usuario.
 
 **Headers:**
-Authorization: Bearer {token}
+Authorization: Bearer \{token\}
 
 **Response:**
 ```json
