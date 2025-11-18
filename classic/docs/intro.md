@@ -1,47 +1,43 @@
----
-sidebar_position: 1
----
+# Introducción
 
-# Tutorial Intro
+## Week3-CrudCloud
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Week3-CrudCloud es un sistema completo de gestión de instancias cloud con arquitectura distribuida, compuesto por un frontend en React y un backend en Spring Boot.
 
-## Getting Started
+## Características Principales
 
-Get started by **creating a new site**.
+- **Gestión de Instancias**: Creación, actualización y eliminación de instancias cloud
+- **Sistema de Planes**: Múltiples planes de suscripción para usuarios
+- **Pagos Integrados**: Integración con MercadoPago para procesamiento de pagos
+- **Autenticación Múltiple**: Login tradicional y OAuth2 con Google
+- **Interfaz Responsive**: Diseño adaptativo para todos los dispositivos
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Tecnologías
 
-### What you'll need
+### Frontend
+- React 18+
+- React Router para navegación
+- Axios para consumo de APIs
+- CSS Modules / Styled Components
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Backend
+- Spring Boot 3.x
+- Spring Security
+- Spring Data JPA
+- PostgreSQL
+- OAuth2 Client
 
-## Generate a new site
+## Repositorios
 
-Generate a new Docusaurus site using the **classic template**.
+- **Frontend**: [Week3-CrudCloud-Frontend](https://github.com/SpringBoot-Macchiato/Week3-CrudCloud-Frontend)
+- **Backend**: [Week3-CrudCloud-Backend](https://github.com/SpringBoot-Macchiato/Week3-CrudCloud-Backend)
+- **Documentación**: [Week3-CrudCloud-Documentation](https://github.com/SpringBoot-Macchiato/Week3-CrudCloud-Documentation)
 
-The classic template will automatically be added to your project after you run the command:
+## Inicio Rápido
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+1. Clonar los repositorios frontend y backend
+2. Configurar variables de entorno
+3. Ejecutar con Docker Compose
+4. Acceder a `http://localhost:3000`
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Para más detalles, consulta la sección de [Despliegue](despliegue/docker.md).
