@@ -1,7 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 
 const config = {
-    title: 'Week3-CrudCloud',
+    title: 'Documentation',
     tagline: 'Documentación técnica completa del proyecto',
     favicon: 'img/favicon.ico',
 
@@ -47,7 +47,7 @@ const config = {
             respectPrefersColorScheme: false,
         },
         navbar: {
-            title: 'Week3-CrudCloud',
+            title: 'CrudCloud',
             logo: {
                 alt: 'CrudCloud Logo',
                 src: 'img/logo.svg',
@@ -85,11 +85,11 @@ const config = {
                     items: [
                         {
                             label: 'API Backend',
-                            href: 'https://api.crudzaso.com',
+                            href: 'https://api.macchiato.crudzaso.com/swagger-ui/index.html#/',
                         },
                         {
                             label: 'Aplicación',
-                            href: 'https://crudzaso.com',
+                            href: 'https://macchiato.crudzaso.com',
                         },
                     ],
                 },

@@ -1,43 +1,50 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import './index.css';
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+    <Layout>
+      <div className="home-container">
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="hero-content">
+            <h1 className="hero-title">CrudCloud Documentation</h1>
+            <p className="hero-description">
+              Documentación técnica completa del proyecto
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="features-section">
+          <div className="section-content">
+            <h2 className="section-title">Características Principales</h2>
+            <div className="features-grid">
+              <div className="feature-item">
+                <h3 className="feature-title">Fácil de Usar</h3>
+                <p className="feature-description">
+                  Interfaces intuitiva y documentación clara para desarrolladores de todos los niveles
+                </p>
+              </div>
+             
+              <div className="feature-item">
+                <h3 className="feature-title">Alto Rendimiento</h3>
+                <p className="feature-description">
+                  Arquitectura optimizada para máxima eficiencia y escalabilidad en producción
+                </p>
+              </div>
+             
+              <div className="feature-item">
+                <h3 className="feature-title">Flexible</h3>
+                <p className="feature-description">
+                  Adaptable a diferentes necesidades, entornos y casos de uso empresarial
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 }
