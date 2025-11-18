@@ -4,9 +4,9 @@ FROM node:20-alpine
 # Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copiar archivos de configuración del proyecto
-COPY classic/package*.json ./
-COPY classic/yarn.lock ./
+# Copiar archivos de dependencias
+COPY classic/package.json ./
+COPY classic/package-lock.json* ./
 
 # Instalar dependencias
 RUN npm install
@@ -20,5 +20,5 @@ RUN npm run build
 # Exponer el puerto 3001
 EXPOSE 3001
 
-# Comando para ejecutar la aplicación en puerto 3001
-CMD ["npm", "run", "serve", "--", "--host", "0.0.0.0", "--port", "3001"]
+# Comando para ejecutar la aplicación
+CMD ["npm", "run", "serve", "--", "--port", "3001", "--host", "0.0.0.0"]
