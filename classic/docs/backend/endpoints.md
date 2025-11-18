@@ -1,9 +1,7 @@
 # API Endpoints
 
 ## Base URL
-```
 http://localhost:8080/api
-```
 
 ## Autenticación
 
@@ -75,9 +73,7 @@ Login con Google OAuth2.
 Obtiene información del usuario autenticado.
 
 **Headers:**
-```
 Authorization: Bearer {token}
-```
 
 **Response:**
 ```json
@@ -89,8 +85,21 @@ Authorization: Bearer {token}
 }
 ```
 
-### GET /users/{id}
+### GET /users/\{id\}
 Obtiene información de un usuario por ID.
+
+**Headers:**
+Authorization: Bearer {token}
+
+**Response:**
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john@example.com",
+  "createdAt": "2024-01-15T10:30:00"
+}
+```
 
 ---
 
@@ -127,8 +136,23 @@ Lista todos los planes activos.
 ]
 ```
 
-### GET /plans/{id}
+### GET /plans/\{id\}
 Obtiene detalle de un plan específico.
+
+**Response:**
+```json
+{
+  "id": 1,
+  "name": "Basic",
+  "description": "Plan básico",
+  "price": 9.99,
+  "currency": "USD",
+  "maxInstances": 1,
+  "maxCpu": 2,
+  "maxRam": 4,
+  "maxStorage": 20
+}
+```
 
 ---
 
@@ -138,12 +162,10 @@ Obtiene detalle de un plan específico.
 Lista todas las instancias del usuario autenticado.
 
 **Headers:**
-```
 Authorization: Bearer {token}
-```
 
 **Query Params (opcional):**
-- `status`: running, stopped, terminated
+- status: running, stopped, terminated
 
 **Response:**
 ```json
@@ -187,10 +209,25 @@ Crea una nueva instancia.
 }
 ```
 
-### GET /instances/{id}
+### GET /instances/\{id\}
 Obtiene detalle de una instancia específica.
 
-### PUT /instances/{id}
+**Response:**
+```json
+{
+  "id": 1,
+  "name": "web-server-1",
+  "type": "t2.micro",
+  "status": "running",
+  "cpu": 1,
+  "ram": 2,
+  "storage": 10,
+  "region": "us-east-1",
+  "createdAt": "2024-01-15T10:30:00"
+}
+```
+
+### PUT /instances/\{id\}
 Actualiza una instancia existente.
 
 **Request Body:**
@@ -202,7 +239,7 @@ Actualiza una instancia existente.
 }
 ```
 
-### DELETE /instances/{id}
+### DELETE /instances/\{id\}
 Elimina una instancia.
 
 **Response:**
@@ -220,9 +257,7 @@ Elimina una instancia.
 Crea una preferencia de pago en MercadoPago.
 
 **Headers:**
-```
 Authorization: Bearer {token}
-```
 
 **Request Body:**
 ```json
@@ -256,9 +291,7 @@ Webhook para notificaciones de MercadoPago.
 Obtiene historial de pagos del usuario.
 
 **Headers:**
-```
 Authorization: Bearer {token}
-```
 
 **Response:**
 ```json
@@ -283,9 +316,7 @@ Authorization: Bearer {token}
 Obtiene el plan actual del usuario.
 
 **Headers:**
-```
 Authorization: Bearer {token}
-```
 
 **Response:**
 ```json
@@ -312,3 +343,4 @@ Suscribe al usuario a un plan (generalmente llamado automáticamente después de
 - **403 Forbidden**: Sin permisos para el recurso
 - **404 Not Found**: Recurso no encontrado
 - **500 Internal Server Error**: Error del servidor
+```
